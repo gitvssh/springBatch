@@ -8,7 +8,7 @@ import org.springframework.batch.repeat.RepeatStatus;
 import org.springframework.stereotype.Component;
 
 @Slf4j
-@Component
+//@Component
 public class ExecutionContextTasklet3 implements Tasklet {
     @Override
     public RepeatStatus execute(StepContribution contribution, ChunkContext chunkContext) throws Exception {

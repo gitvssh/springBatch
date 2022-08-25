@@ -1,4 +1,4 @@
-package io.springbatch.springbatchlecture;
+package io.springbatch.springbatchlecture.example;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.batch.core.StepContribution;

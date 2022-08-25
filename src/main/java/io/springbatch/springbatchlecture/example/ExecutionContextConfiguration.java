@@ -1,4 +1,4 @@
-package io.springbatch.springbatchlecture;
+package io.springbatch.springbatchlecture.example;
 
 import io.springbatch.springbatchlecture.tasklet.ExecutionContextTasklet1;
 import io.springbatch.springbatchlecture.tasklet.ExecutionContextTasklet2;

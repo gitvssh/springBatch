@@ -1,18 +1,15 @@
-package io.springbatch.springbatchlecture;
+package io.springbatch.springbatchlecture.example;
 
-import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.batch.core.*;
 import org.springframework.batch.core.repository.JobRepository;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
 
-@Component
-@RequiredArgsConstructor
+//@Component
+//@RequiredArgsConstructor
 @Slf4j
 public class JobRepositoryListener implements JobExecutionListener {
 
-    private final JobRepository jobRepository;
+    private final JobRepository jobRepository = null;
 
     @Override
     public void beforeJob(JobExecution jobExecution) {

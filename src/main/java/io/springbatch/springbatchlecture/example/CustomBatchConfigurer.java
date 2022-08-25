@@ -1,4 +1,4 @@
-package io.springbatch.springbatchlecture;
+package io.springbatch.springbatchlecture.example;
 
 import org.springframework.batch.core.repository.JobRepository;
 import org.springframework.batch.core.repository.support.JobRepositoryFactoryBean;

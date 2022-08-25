@@ -1,6 +1,7 @@
-package io.springbatch.springbatchlecture;
+package io.springbatch.springbatchlecture.example;
 
 import org.springframework.batch.core.Job;
+import org.springframework.batch.core.JobExecutionListener;
 import org.springframework.batch.core.Step;
 import org.springframework.batch.core.StepContribution;
 import org.springframework.batch.core.configuration.annotation.JobBuilderFactory;
@@ -11,17 +12,19 @@ import org.springframework.batch.repeat.RepeatStatus;
 
 //@Configuration
 //@RequiredArgsConstructor
-public class JobExecutionConfiguration {
+public class JobRepositoryConfiguration {
 
 
     private final JobBuilderFactory jobBuilderFactory = null;
     private final StepBuilderFactory stepBuilderFactory = null;
+    private final JobExecutionListener jobExecutionListener = null;
 
     //    @Bean
     public Job job() {
         return jobBuilderFactory.get("job")
                 .start(step1())
                 .next(step2())
+                .listener(jobExecutionListener)
                 .build();
     }
 
@@ -32,6 +35,7 @@ public class JobExecutionConfiguration {
                 .tasklet(new Tasklet() {
                     @Override
                     public RepeatStatus execute(StepContribution contribution, ChunkContext chunkContext) throws Exception {
+                        Thread.sleep(3000);
                         return RepeatStatus.FINISHED;
                     }
                 })
