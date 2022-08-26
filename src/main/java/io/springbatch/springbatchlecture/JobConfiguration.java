@@ -31,6 +31,8 @@ public class JobConfiguration {
 //                .build();
 //    }
 
+
+
     @Bean
     public Job batchJob2() {
         return this.jobBuilderFactory.get("batchJob2")
